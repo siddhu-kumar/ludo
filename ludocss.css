@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    background-color: orange;
+}
+@keyframes changedir {
+    from {
+        /* transform: rotate(0deg); */
+    }
+    /* 50% {
+        transform: rotateY(360deg);
+    } */
+    to {
+        transform: rotateX(360deg) 
+
+    }
+}
+
+#dice {
+    width: 100%;
+    height: 40%;
+    margin: auto;
+    /* margin-top: 10%; */
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* #dice img {
+    height: 30vh;
+    width: 30vh;
+} */
+
+embed { display: none; }
+button:active + embed { display: block; }
+
+.cube {
+    height: 100px;
+    width: 100px;
+    margin: 100px;
+    /* display: inline-block; */
+    position: relative;
+    margin: 100px;
+    transform-style: preserve-3d;
+    /* perspective: 1000px; */
+    /* transform: rotateX(25deg) rotateY(-25deg); */
+    /* animation: changedir 0.5s linear 3; */
+}
+
+.xyz {
+    transform-style: preserve-3d;
+    animation: changedir 0.5s linear 3;
+}
+
+.cube img {
+    width: 100px;
+    height: 100px;
+}
+
+.face {
+    /* height: 100%;
+    width: 100%; */
+    /* top: 20%;
+    left: 20%; */
+    position: absolute;
+    /* animation: changeshape 6s linear infinite alternate; */
+}
+
+.one {
+    background-color: green;
+} 
+
+.two {
+    background-color: white;
+    transform: rotateY(90deg) translateX(-50px) translateZ(50px);
+}
+
+.three {
+    background-color: rgb(255, 115, 0);
+    transform: rotateX(-90deg) translateZ(-50px) translateY(-50px);
+} 
+
+.four {
+    background-color: blue;
+    transform: rotateX(180deg) translateY(-00px) translateZ(-100px) ;
+}
+
+.five {
+    background-color: yellow;
+    transform: rotateY(90deg) translateX(-50px) translateZ(-50px);
+}
+
+.six {
+    background-color: red;
+    transform: rotateX(-90deg) translateZ(50px) translateY(-50px);
+} 
+
+#score {
+    width: 12vh;
+    height: 7vh;
+    background-color: rgb(228, 134, 26);
+    margin: auto;
+    margin-top: 10vh;
+    font-size: 2rem;
+    color: rgb(214, 202, 31);
+    text-align: center;
+}
+
+#play {
+    margin: auto;
+    margin-top: 5vh;
+    width: 12vh;
+    height: 5vh;
+}
+
+#play button {
+    margin: auto;
+    font-size: 1.2rem;
+    width: 12vh;
+    height: 7vh;
+}
